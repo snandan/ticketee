@@ -16,7 +16,6 @@ Feature: Signing in
     Given there is the following users:
       | email             | password | 
       | user@ticketee.com | password |
-
     And I am on the homepage
     When I follow "Sign In"
     And I fill in "Email" with "user@ticketee.com"
