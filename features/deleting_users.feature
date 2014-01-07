@@ -4,7 +4,7 @@ As an admin
 I want to click a button and delete them
 
 Background:
-  Given there is the following users:
+  Given there are the following users:
     | email              | password | admin |
     | admin@ticketee.com | password | true  |
     | user@ticketee.com  | password | false |

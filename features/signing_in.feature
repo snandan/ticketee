@@ -4,7 +4,7 @@ Feature: Signing in
   I want to be able to sign in
 
   Scenario: Signing in via confirmation
-    Given there is the following users:
+    Given there are the following users:
       | email             | password | unconfirmed |
       | user@ticketee.com | password | true        |
     And "user@ticketee.com" opens the email with subject "Confirmation instructions"
@@ -13,7 +13,7 @@ Feature: Signing in
     And I should see "Signed in as user@ticketee.com"
 
   Scenario: Signing in via form
-    Given there is the following users:
+    Given there are the following users:
       | email             | password | 
       | user@ticketee.com | password |
     And I am on the homepage

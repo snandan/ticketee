@@ -5,12 +5,12 @@ I want to be able to modify them through the backend.
 
 
 Background:
-  Given there is the following users:
+  Given there are the following users:
     | email              | password | admin |
     | admin@ticketee.com | password | true  |
   And I am signed in as them
 
-  Given there is the following users:
+  Given there are the following users:
     | email             | password |
     | user@ticketee.com | password | 
   Given I am on the homepage

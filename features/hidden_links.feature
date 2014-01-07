@@ -4,7 +4,7 @@ As the system
 I want to hide links from users who can't use them
 
 Background:
-  Given there is the following users:
+  Given there are the following users:
     | email              | password | admin |
     | user@ticketee.com  | password | false |
     | admin@ticketee.com | password | true  |
