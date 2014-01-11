@@ -9,6 +9,9 @@ Background:
     | user@ticketee.com  | password | false |
     | admin@ticketee.com | password | true  |
   And there is a project called "TextMate 2"
+  And "user@ticketee.com" has created a ticket for this project:
+    | title  | description       |
+    | Shiny! | My eyes! My eyes! |
   And "user@ticketee.com" can view the "TextMate 2" project
 
 Scenario: New project link is hidden for non-signed-in users
@@ -43,3 +46,59 @@ Scenario: Delete project link is shown to admins
   When I follow "TextMate 2"
   Then I should see the "Delete Project" link.
 
+
+Scenario: New ticket link is shown to a user with permission
+  And "user@ticketee.com" can create tickets in the "TextMate 2" project
+  And I am signed in as "user@ticketee.com"
+  When I follow "TextMate 2"
+  Then I should see "New Ticket"
+
+Scenario: New ticket is hidden from a user without permission
+  And I am signed in as "user@ticketee.com"
+  When I follow "TextMate 2"
+  Then I should not see "New Ticket"
+
+Scenario: New ticket link is shown to admins
+  Given I am signed in as "admin@ticketee.com"
+  When I follow "TextMate 2"
+  Then I should see "New Ticket"
+
+Scenario: Edit ticket link is shown to a user with permission
+  And "user@ticketee.com" can edit tickets in the "TextMate 2" project
+  And I am signed in as "user@ticketee.com"
+  When I follow "TextMate 2"
+  And I follow "Shiny!"
+  Then I should see "Edit Ticket"
+
+Scenario: Edit ticket is hidden from a user without permission
+  And I am signed in as "user@ticketee.com"
+  When I follow "TextMate 2"
+  And I follow "Shiny!"
+  Then I should not see "Edit Ticket"
+
+Scenario: Edit ticket link is shown to admins
+  Given I am signed in as "admin@ticketee.com"
+  When I follow "TextMate 2"
+  And I follow "Shiny!"
+  Then I should see "Edit Ticket"
+
+
+
+Scenario: Delete ticket link is shown to a user with permission
+  And "user@ticketee.com" can delete tickets in the "TextMate 2" project
+  And I am signed in as "user@ticketee.com"
+  When I follow "TextMate 2"
+  And I follow "Shiny!"
+  Then I should see "Delete Ticket"
+
+Scenario: Delete ticket is hidden from a user without permission
+  And I am signed in as "user@ticketee.com"
+  When I follow "TextMate 2"
+  And I follow "Shiny!"
+  Then I should not see "Delete Ticket"
+
+Scenario: Delete ticket link is shown to admins
+  Given I am signed in as "admin@ticketee.com"
+  When I follow "TextMate 2"
+  And I follow "Shiny!"
+  Then I should see "Delete Ticket"

@@ -7,7 +7,7 @@ class TicketsController < ApplicationController
                                         :destroy]
   before_filter :authorize_create!, :only => [:new, :create]
   before_filter :authorize_update!, :only => [:edit, :update]
-  before_filter :authorize_delete!, :onlt => [:destroy]
+  before_filter :authorize_delete!, :only => [:destroy]
   
   def new
     @ticket = @project.tickets.build
