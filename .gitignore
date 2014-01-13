@@ -4,3 +4,4 @@ log/*.log
 tmp/
 .sass-cache/
 /log/test.log.1
+/public/system/tickets/assets/000/000/001/original/speed.txt
