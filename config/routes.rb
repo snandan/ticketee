@@ -17,6 +17,6 @@ Ticketee::Application.routes.draw do
   end
 
   put '/admin/users/:user_id/permissions',
-         :to => 'admin/permissions#update',
-         :as => :update_user_permissions
+        :to => 'admin/permissions#update',
+        :as => :update_user_permissions
 end
