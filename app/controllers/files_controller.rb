@@ -8,6 +8,14 @@ class FilesController < ApplicationController
                                  :content_type => @asset.asset_content_type
   end 
 
+  def new
+    @ticket = Ticket.new
+    asset = @ticket.assets.build
+    render :partial => "files/form", 
+           :locals => {:asset  => asset,
+                       :number => params[:number].to_i}
+  end 
+
   private
     def authorize_view!
       if !current_user.admin? && cannot?("view".to_sym, @asset.ticket.project)

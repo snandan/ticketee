@@ -51,6 +51,7 @@ group :test do
   gem 'paperclip'
   gem 'email_spec'
   gem 'launchy'
+  gem 'selenium-webdriver'
 end
 
 
