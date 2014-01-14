@@ -55,7 +55,6 @@ Feature: Assigning permissions
     When I follow "TextMate 2"
     And I follow "Shiny!"
     And I follow "Edit Ticket"
-    #Then show me the page
     When I fill in "Title" with "Really shiny!"
     And I press "Update Ticket"
     Then I should see "Ticket has been updated"
