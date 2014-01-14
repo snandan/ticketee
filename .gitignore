@@ -5,3 +5,4 @@ tmp/
 .sass-cache/
 /log/test.log.1
 /public/system
+files/*
