@@ -22,4 +22,7 @@ Ticketee::Application.routes.draw do
 
   resources :files
 
+  resources :tickets do
+    resources :comments
+  end
 end

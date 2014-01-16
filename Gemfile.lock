@@ -30,6 +30,9 @@ GEM
     activesupport (3.1.1)
       multi_json (~> 1.0)
     addressable (2.3.5)
+    annotate (2.6.1)
+      activerecord (>= 2.3.0)
+      rake (>= 0.8.7)
     ansi (1.4.3)
     arel (2.2.3)
     bcrypt-ruby (3.1.2)
@@ -183,6 +186,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
   cancan
   capybara
   coffee-rails (~> 3.1.1)
