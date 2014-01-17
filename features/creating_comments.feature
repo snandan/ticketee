@@ -36,4 +36,6 @@ Feature: Creating comments
     And I select "Open" from "State"
     And I press "Create Comment"
     Then I should see "Comment has been created."
-    And I should see "Open" within "#ticket .state"
+    Then show me the page
+    And I should see "Open" within "#ticket"
+    Then I should see "State: Open" within "#comments"

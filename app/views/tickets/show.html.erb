@@ -26,7 +26,7 @@
   <%= link_to "Delete Ticket", [@project, @ticket], :method => "delete", :confirm => "Are you sure?" %>
 <% end %>
 
-<h3>Commnets</h3>
+<h3>Comments</h3>
 <div id="comments">
   <% if @ticket.comments.exists? %><co id="ch10_191_1"/>
     <%= render @ticket.comments.select(&:persisted?) %>
