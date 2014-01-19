@@ -67,5 +67,5 @@ Background:
     And I fill in "Tags" with "browser visual"
     And I press "Create Ticket"
     Then I should see "Ticket has been created"
-    And I should see "browser" within "#ticket #tags"
-    And I should see "visual" within "#ticket #tags"
+    And I should see "browser" within "#ticket > #tags"
+    And I should see "visual" within "#ticket > #tags"
