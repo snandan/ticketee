@@ -4,7 +4,7 @@ Feature: Seed Data
   I want to run the seed task
 
   Scenario: The basics
-    Given I have run the seen task
+    Given I have run the seed task
     And I am signed in as "admin@ticketee.com"
     When I follow "Ticketee Beta"
     And I follow "New Ticket"
