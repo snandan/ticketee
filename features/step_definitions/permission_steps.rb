@@ -31,6 +31,14 @@ Given(/^"(.*?)" can delete tickets in the "(.*?)" project$/) do |user, project|
                      :action => "delete tickets")
 end
 
+Given(/^"(.*?)" can change states in the "(.*?)" project$/) do |user, project|
+  Permission.create!(:user   => User.find_by_email!(user),
+                     :thing  => Project.find_by_name!(project),
+                     :action => "change states")
+end
+
+
+
 # Given permission_step do |user, permission, on, project|
 #   create_permission(user, find_project(project), permission)
 # end
