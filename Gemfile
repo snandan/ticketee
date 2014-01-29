@@ -50,6 +50,7 @@ group :test do
   gem 'devise', '~> 1.4.3'
   gem 'cancan'
   gem 'paperclip'
+  gem 'searcher'
   gem 'email_spec'
   gem 'launchy'
   gem 'selenium-webdriver'
