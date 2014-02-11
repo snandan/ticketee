@@ -39,6 +39,7 @@ end
 
 
 group :test, :development do
+  gem 'gmail'
   gem 'rspec-rails'
 end
 
