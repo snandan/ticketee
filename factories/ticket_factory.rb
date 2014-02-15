@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :ticket do
     title       "A ticket"
     description "A ticket, nothing else"
-    user    { |u| u.assocation(:user)    }
-    project { |p| p.assocation(:project) }
+    user    { |u| u.association(:user)    }
+    project { |p| p.association(:project) }
   end
 end
