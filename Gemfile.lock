@@ -210,6 +210,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   paperclip
+  rack-test
   rails (= 3.1.1)
   rspec-rails
   sass-rails (~> 3.1.4)
